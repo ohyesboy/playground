@@ -8,4 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "show the event content"
-        run: echo '${{ toJSON(secrets)}}  -- ${{REPOSITORY}}' 
+        run: |
+          echo '${{ toJSON(secrets)}}'
+          echo '${{REPOSITORY}}' 
+
+        env:
+          REPOSITORY: "repo1"
