@@ -1,0 +1,11 @@
+name: learn actions
+
+on:
+  push:
+
+jobs:
+  show-event-content:
+    runs-on: ubuntu-latest
+    steps:
+      -name: "show the event content"
+      run: echo '${{ github.event_name}}'
