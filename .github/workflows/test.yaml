@@ -10,7 +10,7 @@ jobs:
       - name: "show the event content"
         run: |
           echo '${{ toJSON(secrets)}}'
-          echo '${{REPOSITORY}}' 
+          echo '${REPOSITORY}' 
 
         env:
           REPOSITORY: "repo1"
